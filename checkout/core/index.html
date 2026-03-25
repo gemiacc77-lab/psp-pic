@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Secure Checkout - CORE PACK | OPTILINE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/imgs/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/imgs/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/assets/imgs/favicon-48x48.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/imgs/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+  </head>
+  <body>
+    <div class="custom-cursor"></div>
+    <header class="checkout-header-bar">
+      <a href="/" class="logo">
+        <img
+          src="/assets/imgs/optiline-logo.webp"
+          width="150"
+          height="25"
+          alt="OPTILINE"
+        />
+      </a>
+      <a href="/pricing/" class="header-pkg-btn">
+        <i class="fas fa-arrow-left"></i> Change Package
+      </a>
+    </header>
+    <main>
+      <section class="checkout-section core-glow">
+        <div class="checkout-bg-glow"></div>
+        <div class="hero-floating-dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="checkout-card checkout-card-unified">
+          <div class="checkout-header">
+            <h1 class="glow-text">Initialize Core</h1>
+            <p>Establish your brand foundation with professional precision</p>
+          </div>
+          <div class="checkout-summary">
+            <div class="summary-header">
+              <h3>PACKAGE OVERVIEW</h3>
+              <span class="package-badge">Best for Startups</span>
+            </div>
+            <ul>
+              <li>
+                <i class="fas fa-fingerprint"></i>
+                <div>
+                  <strong>Identity:</strong> Logo, Colors, Fonts & 1-Page Sheet
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-layer-group"></i>
+                <div><strong>Content:</strong> 6 Ready-to-Publish Posts</div>
+              </li>
+              <li>
+                <i class="fas fa-bullseye"></i>
+                <div><strong>Ads:</strong> Single Campaign + Basic Pixel</div>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>Delivery:</strong> 7-10 Days (2 Revision Rounds)
+                </div>
+              </li>
+            </ul>
+            <div class="price-container">
+              <span class="price-label">Investment:</span>
+              <span class="checkout-total">$799.00</span>
+            </div>
+          </div>
+          <div class="payment-methods-container">
+            <button id="open-crypto-modal" class="crypto-pay-btn">
+              <span>Pay Now</span>
+              <i class="fas fa-chevron-right arrow-icon"></i>
+            </button>
+            <p class="payment-hint">
+              Instant processing via secure blockchain network
+            </p>
+          </div>
+          <div class="secure-badge">
+            <span><i class="fas fa-lock"></i> 256-bit SSL Encrypted</span>
+            <span><i class="fas fa-shield-alt"></i> Secure Payment</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="opti-crypto-modal" class="opti-modal-overlay" data-lenis-prevent>
+      <div class="opti-modal-content" data-lenis-prevent>
+        <div id="opti-phase-selection" class="opti-modal-phase active">
+          <h2 class="opti-modal-title">Secure Checkout</h2>
+          <p class="opti-modal-subtitle">
+            Enter your details and select your preferred cryptocurrency network
+          </p>
+          <div class="opti-input-group">
+            <label for="client-name">Full Name</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                id="client-name"
+                placeholder="John Doe"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <span class="input-error-msg" id="name-error"
+              ><i class="fas fa-circle-exclamation"></i> Please enter your full
+              name (first and last name)</span
+            >
+          </div>
+          <div class="opti-input-group">
+            <label for="client-email">Email Address</label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                id="client-email"
+                placeholder="john@company.com"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <span class="input-error-msg" id="email-error"
+              ><i class="fas fa-circle-exclamation"></i> Please enter a valid
+              email address</span
+            >
+          </div>
+          <div class="opti-input-group">
+            <label for="crypto-select">Select Currency</label>
+            <div class="opti-select-wrapper">
+              <select id="crypto-select" class="opti-custom-select">
+                <optgroup label="Stablecoins (Recommended)">
+                  <option value="usdttrc20">USDT (TRC20 - TRON)</option>
+                  <option value="usdterc20">USDT (ERC20 - ETH)</option>
+                  <option value="usdtbsc">USDT (BEP20 - BSC)</option>
+                  <option value="usdc">USDC</option>
+                </optgroup>
+                <optgroup label="Top Cryptocurrencies">
+                  <option value="btc">Bitcoin (BTC)</option>
+                  <option value="eth">Ethereum (ETH)</option>
+                  <option value="bnbbsc">BNB (Smart Chain)</option>
+                  <option value="sol">Solana (SOL)</option>
+                  <option value="ltc">Litecoin (LTC)</option>
+                </optgroup>
+                <optgroup label="Alternative Coins">
+                  <option value="trx">TRON (TRX)</option>
+                  <option value="doge">Dogecoin (DOGE)</option>
+                  <option value="shib">Shiba Inu (SHIB)</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <button id="generate-payment" class="opti-primary-btn">
+            <span>Generate Payment Address</span>
+            <i class="fas fa-bolt"></i>
+          </button>
+        </div>
+        <div id="opti-phase-loading" class="opti-modal-phase">
+          <div class="opti-spinner-container">
+            <div class="opti-loading-spinner"></div>
+            <p>Processing your payment request...</p>
+          </div>
+        </div>
+        <div id="opti-phase-details" class="opti-modal-phase">
+          <h2 class="opti-modal-title">Payment Details</h2>
+          <div id="payment-timer" class="opti-timer">Price locked for: <span>20:00</span></div>
+          <div class="opti-qr-container">
+            <img id="payment-qr" src="" alt="Payment QR Code" />
+          </div>
+          <div id="selected-crypto-name" class="opti-crypto-label"></div>
+          <div class="opti-payment-info">
+            <div class="opti-info-row">
+              <span>Amount Required:</span>
+              <div class="opti-amount-wrapper">
+                <strong id="pay-amount" class="opti-highlight">0.00</strong>
+                <button id="copy-amount-btn" class="opti-icon-btn">
+                  <i class="far fa-copy"></i>
+                </button>
+              </div>
+            </div>
+            <div class="opti-info-row">
+              <span>USD Equivalent:</span>
+              <span>$799.00</span>
+            </div>
+          </div>
+          <div class="opti-address-container">
+            <label>Wallet Address</label>
+            <div class="opti-address-box">
+              <code id="wallet-address">Fetching...</code>
+              <button id="copy-address-btn" class="opti-copy-btn">
+                <i class="far fa-copy"></i>
+                <span>Copy Address</span>
+              </button>
+            </div>
+          </div>
+          <div id="network-warning" class="opti-warning-box">
+            <i class="fas fa-shield-halved"></i>
+            <p>
+              Please ensure you send the cryptocurrency through the correct
+              network to avoid losing your funds.
+            </p>
+          </div>
+          <div class="opti-verify-section">
+            <button id="verify-payment-btn" class="opti-primary-btn">
+              <i class="fas fa-sync-alt"></i> I Have Paid - Verify Payment
+            </button>
+            <p id="verify-status-msg"></p>
+          </div>
+        </div>
+        <div id="opti-phase-success" class="opti-modal-phase">
+          <div class="opti-success-container">
+            <div class="opti-success-circle">
+              <i class="fas fa-check"></i>
+            </div>
+            <h2 class="opti-modal-title success-title">Transaction Secured</h2>
+            <p class="opti-modal-subtitle success-subtitle">
+              Welcome to OPTILINE. Your payment is successfully verified on the blockchain.
+            </p>
+            <div class="opti-next-steps success-action-box">
+              <h3 class="success-action-title">
+                <i class="fas fa-envelope-open-text"></i> Final Step to Commence
+              </h3>
+              <p class="success-action-text">
+                We have securely dispatched your <strong>Onboarding Link</strong> to your email.
+              </p>
+              
+              <div class="success-highlight">
+                <div class="highlight-header">
+                  <i class="fas fa-exclamation-circle"></i> ACTION REQUIRED
+                </div>
+                <div class="highlight-body">
+                  Please check your inbox (and Spam folder) right now. Your project deployment will <strong>NOT begin</strong> until you submit the initial brief via the link provided.
+                </div>
+              </div>
+              <div class="success-actions">
+                <button class="opti-primary-btn" onclick="window.location.href = '/'">Return Home</button>
+                <button class="opti-secondary-btn support-btn" onclick="window.location.href = '/contact'">Contact Support</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/payment.js" defer></script>
+    <div id="cookie-banner" class="cookie-banner">
+      <div class="cookie-content">
+        <h3><i class="fas fa-user-shield"></i> Privacy Preference Center</h3>
+        <p>
+          We utilize cookies and essential technologies to engineer a seamless
+          digital experience, optimize site performance, and enable core
+          marketing functions. By clicking "Accept", you acknowledge our use of
+          these technologies.
+        </p>
+        <div class="cookie-buttons">
+          <button id="accept-cookies">Accept All</button>
+          <button id="reject-cookies">Decline</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
